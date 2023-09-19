@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://example.com/2023/02/06/%E8%87%AA%E6%90%ADVPS%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="Code Crafting">
 <meta property="og:description" content="因为之前有一个Azure的最基础的云服务器，就想着搭一个VPS，一直拖了很久才行动，下面是搭建过程的一些记录。如果作为一个教程看，可以直接跳过不需要的部分，比如升级系统。不过一定要看最后，最后有写我为什么成功后又失败了。 本文所使用的设施云服务器 服务：Azure Standard B1s   1G内存   64G磁盘  操作系统：Linux CentOS 7.6   123456[CentOS]">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743302.png">
 <meta property="og:image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743304.png">
 <meta property="og:image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743305.png">
@@ -49,7 +49,7 @@
     sidebar: "",
     isHome : false,
     isPost : true,
-    lang   : 'en'
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -93,7 +93,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
+    <div class="toggle" aria-label="切换导航栏">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -122,27 +122,27 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
   </ul>
@@ -172,16 +172,19 @@
     
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/06/%E8%87%AA%E6%90%ADVPS%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jason Li">
-      <meta itemprop="description" content="There are two equivalence classes of idiots:
-Those who yearn for the past that never was.
-AND
-Those who dream of the future that never will be.">
+      <meta itemprop="description" content=" There are two equivalence classes of idiots:
+ 
+ Those who yearn for the past that never was.
+ 
+ AND
+ 
+ Those who dream of the future that never will be.">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -197,22 +200,22 @@ Those who dream of the future that never will be.">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
 
-              <time title="Created: 2023-02-06 13:03:45" itemprop="dateCreated datePublished" datetime="2023-02-06T13:03:45+08:00">2023-02-06</time>
+              <time title="创建时间：2023-02-06 13:03:45" itemprop="dateCreated datePublished" datetime="2023-02-06T13:03:45+08:00">2023-02-06</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-09-19 23:50:18" itemprop="dateModified" datetime="2023-09-19T23:50:18+08:00">2023-09-19</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-09-19 23:50:18" itemprop="dateModified" datetime="2023-09-19T23:50:18+08:00">2023-09-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
                 </span>
@@ -431,10 +434,10 @@ Those who dream of the future that never will be.">
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Table of Contents
+          文章目录
         </li>
         <li class="sidebar-nav-overview">
-          Overview
+          站点概览
         </li>
       </ul>
 
@@ -447,10 +450,13 @@ Those who dream of the future that never will be.">
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Jason Li</p>
-  <div class="site-description" itemprop="description">There are two equivalence classes of idiots:
-Those who yearn for the past that never was.
-AND
-Those who dream of the future that never will be.</div>
+  <div class="site-description" itemprop="description"> There are two equivalence classes of idiots:
+ 
+ Those who yearn for the past that never was.
+ 
+ AND
+ 
+ Those who dream of the future that never will be.</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -458,20 +464,20 @@ Those who dream of the future that never will be.</div>
           <a href="/archives/">
         
           <span class="site-state-item-count">5</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">categories</span></a>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
         <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">tags</span></a>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -503,7 +509,7 @@ Those who dream of the future that never will be.</div>
   </span>
   <span class="author" itemprop="copyrightHolder">Jason Li</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 
         
