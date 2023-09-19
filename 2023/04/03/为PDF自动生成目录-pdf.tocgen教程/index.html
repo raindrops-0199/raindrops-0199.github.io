@@ -24,7 +24,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="为PDF自动生成目录-pdf.tocgen教程">
 <meta property="og:url" content="http://example.com/2023/04/03/%E4%B8%BAPDF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95-pdf.tocgen%E6%95%99%E7%A8%8B/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Code Crafting">
 <meta property="og:description" content="在许多文档处理工作中，自动生成目录是一个常见的需求，尤其是对于大型PDF文档。手动创建目录可能会很繁琐且耗时，因此寻找自动化的解决方案是很有必要的。在这篇博客中，推荐一个强大的命令行工具 - pdf.tocgen，它可以帮助我们自动生成PDF文档的目录。 网上还有很多其他工具可以自动生成目录，但是基本都需要提前找到完整的目录信息，才可以为pdf生成目录。这个工具不需要完整的目录信息，只需根据一点信">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202304172101923.png">
@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202305081135710.png">
 <meta property="og:image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202305081110956.png">
 <meta property="article:published_time" content="2023-04-03T08:06:49.741Z">
-<meta property="article:modified_time" content="2023-09-19T15:42:10.645Z">
+<meta property="article:modified_time" content="2023-09-19T15:49:59.153Z">
 <meta property="article:author" content="Jason Li">
 <meta property="article:tag" content="tools">
 <meta name="twitter:card" content="summary">
@@ -52,7 +52,7 @@
   };
 </script>
 
-  <title>为PDF自动生成目录-pdf.tocgen教程 | Hexo</title>
+  <title>为PDF自动生成目录-pdf.tocgen教程 | Code Crafting</title>
   
 
 
@@ -103,7 +103,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">Code Crafting</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -177,11 +177,14 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jason Li">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="There are two equivalence classes of idiots:
+Those who yearn for the past that never was.
+AND
+Those who dream of the future that never will be.">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Code Crafting">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -202,7 +205,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-09-19 23:42:10" itemprop="dateModified" datetime="2023-09-19T23:42:10+08:00">2023-09-19</time>
+                <time title="Modified: 2023-09-19 23:49:59" itemprop="dateModified" datetime="2023-09-19T23:49:59+08:00">2023-09-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -226,7 +229,7 @@
 
       
         <p>在许多文档处理工作中，自动生成目录是一个常见的需求，尤其是对于大型PDF文档。手动创建目录可能会很繁琐且耗时，因此寻找自动化的解决方案是很有必要的。在这篇博客中，推荐一个强大的命令行工具 - <a target="_blank" rel="noopener" href="https://github.com/Krasjet/pdf.tocgen">pdf.tocgen</a>，它可以帮助我们自动生成PDF文档的目录。</p>
-<p>网上还有很多其他工具可以自动生成目录，但是基本都需要提前找到完整的目录信息，才可以为pdf生成目录。这个工具不需要完整的目录信息，只需根据一点信息，就可以从pdf自动推导出目录。因为很多时候我们无法找到pdf文件的已有目录信息，所以我推荐这个工具。</p>
+<p>网上还有很多其他工具可以自动生成目录，但是基本都需要提前找到完整的目录信息，才可以为pdf生成目录。这个工具不需要完整的目录信息，只需根据一点信息，就可以从pdf自动推导出目录。因为很多时候我们无法找到pdf文件的已有目录信息，所以我推荐这个工具。下面就来介绍一下如何安装并使用该工具。</p>
 <span id="more"></span>
 
 <h1 id="0-简介"><a href="#0-简介" class="headerlink" title="0 简介"></a>0 简介</h1><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>我用一本zlib上下载的pdf英文书为例，下载下来时是没有目录的，用preview打开效果如下, 可以看到左边是没有目录的。</p>
@@ -388,7 +391,10 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">Jason Li</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">There are two equivalence classes of idiots:
+Those who yearn for the past that never was.
+AND
+Those who dream of the future that never will be.</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
