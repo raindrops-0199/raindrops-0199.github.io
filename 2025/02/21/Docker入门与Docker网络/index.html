@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="容器容器是另外一种轻量级的虚拟化，容器是共用主 机内核，利用内核的虚拟化技术隔离出一个独立的运行环境，拥有独立的一个文件系统，网络空间，进程空间视图等 容器与虚拟机的区别 容器跟虚拟机很相似，但是依然有不同，容器与虚拟机本质的区别是： 容器是进程级别的资源隔离。虚拟机是操作系统级别的资源隔离 DockerDocker是一个开源的容器化平台，在Linux，Windows，Mac上都可以使用。 Doc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker入门与Docker网络">
+<meta property="og:url" content="http://example.com/2025/02/21/Docker%E5%85%A5%E9%97%A8%E4%B8%8EDocker%E7%BD%91%E7%BB%9C/index.html">
+<meta property="og:site_name" content="Code Crafting">
+<meta property="og:description" content="容器容器是另外一种轻量级的虚拟化，容器是共用主 机内核，利用内核的虚拟化技术隔离出一个独立的运行环境，拥有独立的一个文件系统，网络空间，进程空间视图等 容器与虚拟机的区别 容器跟虚拟机很相似，但是依然有不同，容器与虚拟机本质的区别是： 容器是进程级别的资源隔离。虚拟机是操作系统级别的资源隔离 DockerDocker是一个开源的容器化平台，在Linux，Windows，Mac上都可以使用。 Doc">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303231427101.png">
+<meta property="article:published_time" content="2025-02-21T10:11:11.977Z">
+<meta property="article:modified_time" content="2025-02-21T10:11:11.977Z">
+<meta property="article:author" content="Jason Li">
+<meta property="article:tag" content="docker">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303231427101.png">
+
+
+<link rel="canonical" href="http://example.com/2025/02/21/Docker%E5%85%A5%E9%97%A8%E4%B8%8EDocker%E7%BD%91%E7%BB%9C/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2025/02/21/Docker%E5%85%A5%E9%97%A8%E4%B8%8EDocker%E7%BD%91%E7%BB%9C/","path":"2025/02/21/Docker入门与Docker网络/","title":"Docker入门与Docker网络"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Docker入门与Docker网络 | Code Crafting</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Code Crafting</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">There are two equivalence classes of idiots: Those who yearn for the past that never was. AND Those who dream of the future that never will be.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker"><span class="nav-number">2.</span> <span class="nav-text">Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-run%E5%91%BD%E4%BB%A4"><span class="nav-number">2.1.</span> <span class="nav-text">docker run命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker%E7%BD%91%E7%BB%9C"><span class="nav-number">3.</span> <span class="nav-text">Docker网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E9%9D%A2%E4%B8%BB%E8%A6%81%E8%AE%B2%E4%B8%80%E4%B8%8BBridge%E7%BD%91%E7%BB%9C"><span class="nav-number">3.1.</span> <span class="nav-text">下面主要讲一下Bridge网络</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Jason Li</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/21/Docker%E5%85%A5%E9%97%A8%E4%B8%8EDocker%E7%BD%91%E7%BB%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Jason Li">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Code Crafting">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Docker入门与Docker网络 | Code Crafting">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Docker入门与Docker网络
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-02-21 18:11:11" itemprop="dateCreated datePublished" datetime="2025-02-21T18:11:11+08:00">2025-02-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>920</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>容器是另外一种轻量级的虚拟化，容器是共用主 机内核，利用内核的虚拟化技术隔离出一个独立的运行环境，拥有独立的一个文件系统，网络空间，进程空间视图等</p>
+<p><strong>容器与虚拟机的区别</strong></p>
+<p>容器跟虚拟机很相似，但是依然有不同，容器与虚拟机本质的区别是：</p>
+<p>容器是进程级别的资源隔离。虚拟机是操作系统级别的资源隔离</p>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>Docker是一个开源的容器化平台，在Linux，Windows，Mac上都可以使用。</p>
+<p>Docker可以分为三部分：</p>
+<ul>
+<li><p>Docker client</p>
+<p>Docker客户端是命令行工具，它与Docker守护进程(deamon)通信，用于创建、管理和操作Docker容器、镜像、网络等资源。Docker客户端可以在本地或远程计算机上运行，以便与Docker守护进程通信。</p>
+</li>
+<li><p>Docker deamon</p>
+<p>Docker守护进程是运行在主机上的后台进程，负责管理Docker容器、镜像、网络等资源。它通过与Docker客户端通信来响应请求，包括创建、启动、停止、删除容器等操作。</p>
+</li>
+</ul>
+<span id="more"></span>
+
+<ul>
+<li><p>Docker registry</p>
+<p>Docker镜像库是Docker镜像(Docker image)的存储库，可以存储和分享Docker镜像</p>
+</li>
+</ul>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303231427101.png" alt="image-20230323142740024"></p>
+<p>Docker deamon必须运行在Linux上。所以Window或Mac上都是用的是Docker Desktop。Docker Desktop在电脑上创建一个Linux虚拟机，将Docker deamon运行在Linunx上，并为用户提供Docker client，来与Docker deamon进行交互。</p>
+<h3 id="docker-run命令"><a href="#docker-run命令" class="headerlink" title="docker run命令"></a>docker run命令</h3><p>docker run …</p>
+<ul>
+<li><p><code>-d</code>: 后台运行容器，并返回容器ID</p>
+</li>
+<li><p><code>-i</code>: 以交互模式运行容器，通常与 <code>-t</code> 同时使用</p>
+</li>
+<li><p><code>-t</code>: 为容器重新分配一个伪输入终端，通常与 <code>-i</code> 同时使用</p>
+</li>
+<li><p><code>-p</code>: 指定（发布）端口映射，格式为：主机(宿主)端口:容器端口</p>
+<p>这是小写的p</p>
+</li>
+<li><p><code>-P</code>: 随机端口映射，容器内部端口随机映射到主机的高端口</p>
+<p>这是大写的P</p>
+</li>
+<li><p><code>--name=nginx-lb</code>: 为容器指定一个名称</p>
+</li>
+<li><p><code>-e username=ritchie</code>: 设置环境变量</p>
+</li>
+<li><p><code>--env-file=c:/temp1/t1.txt</code>: 从指定文件读入环境变量</p>
+</li>
+<li><p><code>--expose=2000-2002</code>: 开放（暴露）一个端口或一组端口；</p>
+</li>
+<li><p><code>--link my_sql:sql_server</code> : 添加链接到另一个容器</p>
+</li>
+<li><p><code>-v C:\temp:/data</code>: 绑定一个卷(volume)</p>
+<p>冒号左边是宿主机目录格式，右边是Linux目录格式</p>
+</li>
+<li><p><code>--rm</code> 退出时自动删除容器</p>
+</li>
+</ul>
+<h2 id="Docker网络"><a href="#Docker网络" class="headerlink" title="Docker网络"></a>Docker网络</h2><p>Docker网络有四种类型，分别是：</p>
+<ul>
+<li><p>Bridge</p>
+<p>桥接式网络模式，也是默认的网络模式</p>
+</li>
+<li><p>Host</p>
+</li>
+<li><p>开放式网络模式，和宿主机共享网络</p>
+</li>
+<li><p>Container</p>
+</li>
+<li><p>联合挂载式网络模式，和其他容器共享网络</p>
+</li>
+<li><p>None</p>
+</li>
+<li><p>封闭式网络模式，不为容器配置网络</p>
+</li>
+</ul>
+<p>ps.从Windows宿主机是无法ping通Docker容器的，但从容器里可以ping通宿主机。因为容器是在一个Linux虚拟机里，宿主机是看不到的。但是从容器到宿主机是有网关的，所以可以通信。</p>
+<h3 id="下面主要讲一下Bridge网络"><a href="#下面主要讲一下Bridge网络" class="headerlink" title="下面主要讲一下Bridge网络"></a>下面主要讲一下Bridge网络</h3><p>Bridge网络使用虚拟网桥。连接到同一个网桥上容器是可以互相通信的，不同网桥之间的容器一般是不能互相通信的。</p>
+<p>Docker启动时会会默认创建一个bridge网络，如果不自行创建新的网络，那么创建的容器默认都在这个bridge上。</p>
+<p>如果不同bridge之间的容器想要通信怎么办：</p>
+<p>只需用<code>docker network connect</code>命令将容器搭到另一个bridge上即可。这样该容器会有不止一个ip地址，同一bridge下的ip可以互相ping通</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/docker/" rel="tag"># docker</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/02/21/billu%20b0x%E9%9D%B6%E5%9C%BA%E6%B8%97%E9%80%8F%E6%8F%90%E6%9D%83(%E8%B6%85%E8%AF%A6%E7%BB%86)/" rel="prev" title="billu b0x靶场渗透提权(超详细)">
+                  <i class="fa fa-angle-left"></i> billu b0x靶场渗透提权(超详细)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/02/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/" rel="next" title="设计模式概述">
+                  设计模式概述 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Jason Li</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">12k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">41 分钟</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
