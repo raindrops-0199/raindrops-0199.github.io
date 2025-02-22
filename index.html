@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
   <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
@@ -17,7 +18,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.22.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="Code Crafting">
@@ -57,6 +58,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -72,15 +76,46 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </header>
         
@@ -105,6 +140,8 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Jason Li"
+      src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
   <p class="site-author-name" itemprop="name">Jason Li</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -128,6 +165,14 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/raindrops-0199" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;raindrops-0199" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lkarry0199@gmail.com" title="E-Mail → mailto:lkarry0199@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
 
         </div>
       </div>
@@ -152,7 +197,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/22/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---UDP%E9%80%9A%E4%BF%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
       <meta itemprop="name" content="Jason Li">
     </span>
 
@@ -179,7 +224,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-02-22 18:12:08 / 修改时间：18:31:31" itemprop="dateCreated datePublished" datetime="2025-02-22T18:12:08+08:00">2025-02-22</time>
+      <time title="创建时间：2025-02-22 18:12:08 / 修改时间：19:41:20" itemprop="dateCreated datePublished" datetime="2025-02-22T18:12:08+08:00">2025-02-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -217,6 +262,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>相比于 TCP 的面向连接、可靠传输，UDP 协议是一种无连接、不保证数据可靠性和顺序的传输方式。它更适用于对实时性要求高，但对丢包不敏感的场景，比如视频直播、在线游戏和语音通信等。Python 中的 socket 模块同样封装了 UDP 协议，为程序员提供了简便的接口来实现 UDP 通信。本文将分别介绍 UDP 通信中的客户端与服务端实现方法，并给出相应的代码示例。</p>
+<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>UDP 客户端无需建立连接，而是直接将数据报发送到指定的服务器地址和端口。下面的示例展示了如何使用 Python 的 socket 模块实现一个简单的 UDP 客户端：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个 UDP socket，AF_INET表示IPv4，SOCK_DGRAM表示使用UDP协议</span></span><br><span class="line">s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义服务端的地址与端口</span></span><br><span class="line">server_addr = (<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">8888</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 要发送的消息</span></span><br><span class="line">message = <span class="string">&quot;hello, UDP&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用sendto方法将消息发送到指定的服务端地址</span></span><br><span class="line">s.sendto(message.encode(), server_addr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接收来自服务端的响应，recvfrom返回一个元组：(数据, 服务端地址)</span></span><br><span class="line">data, addr = s.recvfrom(<span class="number">1024</span>)</span><br><span class="line"><span class="keyword">if</span> data:</span><br><span class="line">	recv_message = data.decode()</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">f&quot;接收到来自 <span class="subst">&#123;addr&#125;</span> 的消息: <span class="subst">&#123;recv_message&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2025/02/22/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---UDP%E9%80%9A%E4%BF%A1/#more" rel="contents">
@@ -250,10 +297,10 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/21/%E4%BD%A0%E9%80%82%E5%90%88%E8%AF%BB%E5%8D%9A%E5%90%97/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/30/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---TCP%E9%80%9A%E4%BF%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
       <meta itemprop="name" content="Jason Li">
     </span>
 
@@ -268,7 +315,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/21/%E4%BD%A0%E9%80%82%E5%90%88%E8%AF%BB%E5%8D%9A%E5%90%97/" class="post-title-link" itemprop="url">你适合读博吗?</a>
+          <a href="/2023/11/30/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---TCP%E9%80%9A%E4%BF%A1/" class="post-title-link" itemprop="url">python socket编程之---TCP通信</a>
         </h2>
 
         <div class="post-meta-container">
@@ -279,7 +326,228 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2025-02-21 18:11:11" itemprop="dateCreated datePublished" datetime="2025-02-21T18:11:11+08:00">2025-02-21</time>
+      <time title="创建时间：2023-11-30 15:41:01" itemprop="dateCreated datePublished" datetime="2023-11-30T15:41:01+08:00">2023-11-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-22 19:41:09" itemprop="dateModified" datetime="2025-02-22T19:41:09+08:00">2025-02-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>学习过计算机网络，我们就知道传输层依靠TCP与UDP协议进行消息传输，socket是封装了TCP与UDP协议的一个面向程序员的接口。我们在网络编程时，会经常用到socket，下面就讲讲如何用python的socket实现服务端与客户端之间的TCP通信</p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>TCP通信，需要有一个服务端，一个或多个客户端。服务端监听端口，等待连接。客户端访问端口，请求连接。</p>
+<h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入socket库</span></span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个socket, AF_INET表示使用IPV4，SOCK_STREAM表示使用TCP协议</span></span><br><span class="line">s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line"><span class="comment"># 与服务端连接，addr是服务端的地址与端口</span></span><br><span class="line">addr = (<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">8888</span>)</span><br><span class="line">s.connect(addr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 建立连接后就可以发送消息了</span></span><br><span class="line">message = <span class="string">&quot;hello&quot;</span></span><br><span class="line">s.sendall(message.encode())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接受消息并打印出来</span></span><br><span class="line"><span class="comment"># recv(max) 表示一次接收多少字节的数据，这里是1024字节，也可以是2048等等。</span></span><br><span class="line">recv_datagram = s.recv(<span class="number">1024</span>)</span><br><span class="line"><span class="keyword">if</span> recv_datagram:</span><br><span class="line">  recv_message = recv_datagram.decode()</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&quot;receive message <span class="subst">&#123;recv_message&#125;</span> from server&quot;</span>)</span><br><span class="line">    </span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/11/30/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---TCP%E9%80%9A%E4%BF%A1/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/25/billu%20b0x%E9%9D%B6%E5%9C%BA%E6%B8%97%E9%80%8F%E6%8F%90%E6%9D%83(%E8%B6%85%E8%AF%A6%E7%BB%86)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
+      <meta itemprop="name" content="Jason Li">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Code Crafting">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Code Crafting">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/10/25/billu%20b0x%E9%9D%B6%E5%9C%BA%E6%B8%97%E9%80%8F%E6%8F%90%E6%9D%83(%E8%B6%85%E8%AF%A6%E7%BB%86)/" class="post-title-link" itemprop="url">billu b0x靶场渗透提权(超详细)</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-10-25 01:10:10 / 修改时间：02:01:02" itemprop="dateCreated datePublished" datetime="2023-10-25T01:10:10+08:00">2023-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202310250115198.png" alt="image-20231024201252834"></p>
+<p>Vulnhub靶机billu b0x的渗透实战记录，每一步都有详细的思路和操作过程</p>
+<h1 id="靶机简介"><a href="#靶机简介" class="headerlink" title="靶机简介"></a>靶机简介</h1><p>官方下载地址：<a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/billu-b0x,188/">https://www.vulnhub.com/entry/billu-b0x,188/</a></p>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202310250144485.png" alt="image-20231025014413349"></p>
+<p>目标是获得靶机root权限。话不多说，直接开始：</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/10/25/billu%20b0x%E9%9D%B6%E5%9C%BA%E6%B8%97%E9%80%8F%E6%8F%90%E6%9D%83(%E8%B6%85%E8%AF%A6%E7%BB%86)/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/17/%E4%BD%A0%E9%80%82%E5%90%88%E8%AF%BB%E5%8D%9A%E5%90%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
+      <meta itemprop="name" content="Jason Li">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Code Crafting">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Code Crafting">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/04/17/%E4%BD%A0%E9%80%82%E5%90%88%E8%AF%BB%E5%8D%9A%E5%90%97/" class="post-title-link" itemprop="url">你适合读博吗?</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-04-17 15:35:02" itemprop="dateCreated datePublished" datetime="2023-04-17T15:35:02+08:00">2023-04-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-25 01:28:33" itemprop="dateModified" datetime="2023-10-25T01:28:33+08:00">2023-10-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -298,7 +566,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>468</span>
+      <span>467</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -322,15 +590,46 @@
 <li><p>round 1</p>
 <p>  <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202304171639566.png" alt="image-20230417163900489"></p>
 </li>
+<li><p>round 2</p>
+<p>  <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202304171550513.png" alt="image-20230417155005466"></p>
+</li>
+<li><p>round 3</p>
+<p>  <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202304171544331.png" alt="image-20230417154423285"></p>
+</li>
 </ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/02/21/%E4%BD%A0%E9%80%82%E5%90%88%E8%AF%BB%E5%8D%9A%E5%90%97/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p>如果通过了这三轮测试，说明达到了教授的要求。不得不说，要求还是很高的。我在round 1就被刷掉了。</p>
+<p>网页上还有教授的几句话，也很有意思，分享给大家</p>
+<ul>
+<li>1</li>
+</ul>
+<blockquote>
+<p> <strong>There are two equivalence classes of idiots:</strong></p>
+<p>Those who yearn for the past that never was. </p>
+<p>AND</p>
+<p>Those who dream of the future that never will be.</p>
+</blockquote>
+<p><strong>有两种相同类型的白痴</strong>：<br>那些向往着从未发生过的过去的人。<br>和<br>那些梦想着永远不会出现的未来的人。</p>
+<ul>
+<li>2</li>
+</ul>
+<blockquote>
+<p><strong>Quotidian Wisdom (speaking of idiots):</strong></p>
+<p>For every pithy inspirational quote, saying or proverb, there is army of idiiots willing to believe it.</p>
+</blockquote>
+<p><strong>智慧语录（说到白痴）</strong>：<br>每一句精辟的励志名言、俗语或谚语，都有一群愿意相信它的白痴大军。</p>
+<ul>
+<li>3</li>
+</ul>
+<blockquote>
+<p><strong>An urgent message to all humorless barbarians inhabiting this long-suffering planet:</strong></p>
+<p>As a free human being, I reserve the right to disrespect, mock, parody, laugh at, and disbelieve any and all of your deities, saints, prophets, idols, holy fools, deans, chancellors, political leaders, gurus, kings, presidents and presidential candidates.</p>
+</blockquote>
+<p><strong>给居住在这个长期受难的星球上的所有无幽默感的未开化人的紧急信息</strong>：<br>作为一个自由的人，我拥有不尊重、嘲弄、滑稽地模仿、嘲笑和不相信你们任何神灵、圣人、先知、偶像、神圣的傻子、院长、校长、政治领袖、大师、国王、总统和总统候选人的权利。</p>
+<p>这种追求清醒，质疑权威的精神还是挺让我羡慕的。</p>
+<blockquote>
+<p>内容来源：<a target="_blank" rel="noopener" href="https://www.ics.uci.edu/~gts/">Professor Gene Tsudik’s Info Page</a></p>
+</blockquote>
+
       
     </div>
 
@@ -356,10 +655,10 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/21/%E4%B8%BAPDF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95-pdf.tocgen%E6%95%99%E7%A8%8B/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/03/%E4%B8%BAPDF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95-pdf.tocgen%E6%95%99%E7%A8%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
       <meta itemprop="name" content="Jason Li">
     </span>
 
@@ -374,7 +673,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/21/%E4%B8%BAPDF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95-pdf.tocgen%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">为PDF自动生成目录-pdf.tocgen教程</a>
+          <a href="/2023/04/03/%E4%B8%BAPDF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95-pdf.tocgen%E6%95%99%E7%A8%8B/" class="post-title-link" itemprop="url">为PDF自动生成目录-pdf.tocgen教程</a>
         </h2>
 
         <div class="post-meta-container">
@@ -385,7 +684,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2025-02-21 18:11:11" itemprop="dateCreated datePublished" datetime="2025-02-21T18:11:11+08:00">2025-02-21</time>
+      <time title="创建时间：2023-04-03 16:06:49" itemprop="dateCreated datePublished" datetime="2023-04-03T16:06:49+08:00">2023-04-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-25 01:28:18" itemprop="dateModified" datetime="2023-10-25T01:28:18+08:00">2023-10-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -404,7 +710,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.8k</span>
+      <span>1.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -423,15 +729,77 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>在许多文档处理工作中，自动生成目录是一个常见的需求，尤其是对于大型PDF文档。手动创建目录可能会很繁琐且耗时，因此寻找自动化的解决方案是很有必要的。在这篇博客中，推荐一个强大的命令行工具 - <a target="_blank" rel="noopener" href="https://github.com/Krasjet/pdf.tocgen">pdf.tocgen</a>，它可以帮助我们自动生成PDF文档的目录。</p>
-<p>网上还有很多其他工具可以自动生成目录，但是基本都需要提前找到完整的目录信息，才可以为pdf生成目录。这个工具不需要完整的目录信息，只需根据一点信息，就可以从pdf自动推导出目录。因为很多时候我们无法找到pdf文件的已有目录信息，所以我推荐这个工具。下面就来介绍一下如何安装并使用该工具。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/02/21/%E4%B8%BAPDF%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E7%9B%AE%E5%BD%95-pdf.tocgen%E6%95%99%E7%A8%8B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<p>网上还有很多其他工具可以自动生成目录，但是基本都需要提前找到完整的目录信息，才可以为pdf生成目录。这个工具不需要完整的目录信息，只需根据一点信息，就可以从pdf自动推导出目录。因为很多时候我们无法找到pdf文件的已有目录信息，所以我推荐这个工具。</p>
+<h1 id="0-简介"><a href="#0-简介" class="headerlink" title="0 简介"></a>0 简介</h1><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>我用一本zlib上下载的pdf英文书为例，下载下来时是没有目录的，用preview打开效果如下, 可以看到左边是没有目录的。</p>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202304172101923.png" alt="image-20230417210146885"></p>
+<p>使用该工具后可以达到的效果如下，可以看到已经成功生成了目录，并且可以正确跳转。</p>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202305081109149.png" alt="image-20230508110929077"></p>
+<h3 id="适用条件"><a href="#适用条件" class="headerlink" title="适用条件"></a>适用条件</h3><p>根据<a target="_blank" rel="noopener" href="https://krasjet.com/voice/pdf.tocgen/">官方文档</a>，该工具最适用于从TeX文档使用pdftex（及其相关工具如pdflatex、pdfxetex等）生成的PDF文件，但它也可以与其他软件生成的PDF文件一起使用，例如troff&#x2F;groff、Adobe InDesign、Microsoft Word等。中文英文PDF都适用。</p>
+<p>需要注意的是，扫描的PDF是不适用的。以及格式特殊的PDF(比如标题是图片不是文字形式)可能也会遇到问题。根据具体情况而定。</p>
+<h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>pdf.tocgen是一套用于自动提取和生成PDF文件目录的命令行工具。它使用嵌入字体属性和标题的位置来推断PDF文件的基本大纲。由 pdfxmeta、pdftocgen、pdftocio 三个工具组成。负责的功能如下:</p>
+<ul>
+<li>pdfxmeta: 根据输入的信息，提取标题的元数据（字体属性、位置）以建立一个格式信息文件。</li>
+<li>pdftocgen: 通过格式信息文件生成一个目录描述文件。</li>
+<li>pdftocio: 根据目录描述文件，结合原始pdf，生成增添了目录的新pdf。</li>
+</ul>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">                          in.pdf</span><br><span class="line">                            |</span><br><span class="line">                            |</span><br><span class="line">     +----------------------+--------------------+</span><br><span class="line">     |                      |                    |</span><br><span class="line">     V                      V                    V</span><br><span class="line">+----------+          +-----------+         +----------+</span><br><span class="line">|          |  recipe  |           |   ToC   |          |</span><br><span class="line">| pdfxmeta +---------&gt;| pdftocgen +--------&gt;| pdftocio +---&gt; out.pdf</span><br><span class="line">|          |          |           |         |          |</span><br><span class="line">+----------+          +-----------+         +----------+</span><br></pre></td></tr></table></figure>
+
+<p>看起来稍微有些复杂，上手大概需要十几分钟，学会使用后就变得很方便。分成三个工具有它的好处，使我们更容易看到中间生成的文件内容，来判断行为是否符合我们的预期。也给了我们更大的灵活性。</p>
+<p>下面就来介绍如何使用这个强大的工具</p>
+<h1 id="1-下载"><a href="#1-下载" class="headerlink" title="1. 下载"></a>1. 下载</h1><p>pdf.tocgen是由python3写的，在Linux、MacOS、Windows都可以运行</p>
+<p>如果没有python环境，需要先安装python，这里就不赘述了。</p>
+<p>在命令行输入如下命令即可安装该工具，<code>-U</code>选项表示如果已经安装该包，则更新它，否则下载该包</p>
+<p><code>pip install -U pdf.tocgen</code></p>
+<h1 id="2-工作流程"><a href="#2-工作流程" class="headerlink" title="2. 工作流程"></a>2. 工作流程</h1><h2 id="第一步，创建格式信息文件"><a href="#第一步，创建格式信息文件" class="headerlink" title="第一步，创建格式信息文件"></a>第一步，创建格式信息文件</h2><p>我们使用pdfxmeta工具，根据pdf文件，提供目录信息，从而生成一个<a target="_blank" rel="noopener" href="https://toml.io/">TOML</a>文件，告诉pdftocgen标题、副标题等应该长什么样</p>
+<p>我们需要告诉工具的信息有：任意标题的内容(可以用python格式的正则)、页码、是几级标题。需要注意页码是该目录在pdf中的实际页码，不一定是pdf文件内部标注的页码(比如文章开始给出的效果图中，实际页码是17，内部标注页码是1)</p>
+<p>命令如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdfxmeta -p 页码 -a 级别 pdf文件名 标题内容 &gt;&gt; 输出文件</span><br></pre></td></tr></table></figure>
+
+<p>输出需要是一个<code>.toml</code>格式文件，里面就是标题信息。</p>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p>我们用一个pdf书生成1和2级标题的目录信息文件</p>
+<p>一级标题如下，我们用”Introduction”来表示标题内容</p>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202305081134972.png" alt="image-20230417210146885"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdfxmeta -a 1 -p 17 testbook.pdf &quot;Introduction&quot; &gt;&gt; recipe.toml</span><br></pre></td></tr></table></figure>
+
+<p>输出的recipe.toml文件如下：</p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[[heading]]</span></span><br><span class="line"><span class="comment"># Introduction</span></span><br><span class="line"><span class="attr">level</span> = <span class="number">1</span></span><br><span class="line"><span class="attr">greedy</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">font.name</span> = <span class="string">&quot;ComputerModernBoldExtend&quot;</span></span><br><span class="line"><span class="attr">font.size</span> = <span class="number">29.844999313354492</span></span><br><span class="line"><span class="comment"># font.size_tolerance = 1e-5</span></span><br><span class="line"><span class="comment"># font.color = 0x000000</span></span><br><span class="line"><span class="comment"># font.superscript = false</span></span><br><span class="line"><span class="comment"># font.italic = false</span></span><br><span class="line"><span class="comment"># font.serif = true</span></span><br><span class="line"><span class="comment"># font.monospace = false</span></span><br><span class="line"><span class="comment"># font.bold = true</span></span><br><span class="line"><span class="comment"># bbox.left = 73.14399719238281</span></span><br><span class="line"><span class="comment"># bbox.top = 220.572509765625</span></span><br><span class="line"><span class="comment"># bbox.right = 244.6280517578125</span></span><br><span class="line"><span class="comment"># bbox.bottom = 250.41751098632812</span></span><br><span class="line"><span class="comment"># bbox.tolerance = 1e-5</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来产生2级标题信息</p>
+<p>二级标题如下，因为只需要得到标题的格式，所以提供的标题内容足够辨别出标题就行，比如这里的”1.1”可以不包含在内。最后生成的目录会自动判断出是否属于标题内容。</p>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202305081135710.png" alt="image-20230508113542638"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdfxmeta -a 2 -p 24 testbook.pdf  &quot;Who Should Read This Book?&quot; &gt;&gt; recipe.toml</span><br></pre></td></tr></table></figure>
+
+<p>现在recipe.toml文件如下：</p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[[heading]]</span></span><br><span class="line"><span class="comment"># Introduction</span></span><br><span class="line"><span class="attr">level</span> = <span class="number">1</span></span><br><span class="line"><span class="attr">greedy</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">font.name</span> = <span class="string">&quot;ComputerModernBoldExtend&quot;</span></span><br><span class="line"><span class="attr">font.size</span> = <span class="number">29.844999313354492</span></span><br><span class="line"><span class="comment"># 注释</span></span><br><span class="line"><span class="section">[[heading]]</span></span><br><span class="line"><span class="comment"># Who Should Read This Book?</span></span><br><span class="line"><span class="attr">level</span> = <span class="number">2</span></span><br><span class="line"><span class="attr">greedy</span> = <span class="literal">true</span></span><br><span class="line"><span class="attr">font.name</span> = <span class="string">&quot;ComputerModernBoldExtend&quot;</span></span><br><span class="line"><span class="attr">font.size</span> = <span class="number">17.27400016784668</span></span><br><span class="line"><span class="comment"># 注释</span></span><br></pre></td></tr></table></figure>
+
+<p>格式信息文件就这样生成好了，接下来可以进入下一步了</p>
+<h2 id="第二步，生成目录"><a href="#第二步，生成目录" class="headerlink" title="第二步，生成目录"></a>第二步，生成目录</h2><p>第二步就很简单，只需要利用第一步的输出，用pdftocgen工具，就可以得到目录</p>
+<p>命令如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdftocgen PDF文件 &lt; 元信息文件 &gt;&gt; 输出文件</span><br></pre></td></tr></table></figure>
+
+<p>输出文件可以是<code>.txt</code>格式，也可以不指明格式</p>
+<h3 id="举例-1"><a href="#举例-1" class="headerlink" title="举例"></a>举例</h3><p>继续上面的例子</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdftocgen testbook.pdf &lt; recipe.toml &gt; toc</span><br></pre></td></tr></table></figure>
+
+<p>toc文件内容大致如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&quot;Contents&quot; 3</span><br><span class="line">&quot;Website&quot; 9</span><br><span class="line">&quot;Acknowledgments&quot; 10</span><br><span class="line">&quot;Notation&quot; 13</span><br><span class="line">&quot;Introduction&quot; 17</span><br><span class="line">    &quot;1.1 Who Should Read This Book?&quot; 24</span><br><span class="line">    &quot;1.2 Historical Trends in Deep Learning&quot; 27</span><br><span class="line">&quot;Applied Math and Machine&quot; 45</span><br><span class="line">&quot;Learning Basics&quot; 45</span><br><span class="line">&quot;Linear Algebra&quot; 47</span><br><span class="line">    &quot;2.1 Scalars, Vectors, Matrices and Tensors&quot; 47</span><br><span class="line">    &quot;2.2 Multiplying Matrices and Vectors&quot; 50</span><br><span class="line">    &quot;2.3 Identity and Inverse Matrices&quot; 52</span><br><span class="line">    &quot;2.4 Linear Dependence and Span&quot; 53</span><br><span class="line">    &quot;2.5 Norms&quot; 55</span><br><span class="line">    &quot;2.6 Special Kinds of Matrices and Vectors&quot; 56</span><br><span class="line">    &quot;2.7 Eigendecomposition&quot; 58</span><br><span class="line">    &quot;2.8 Singular Value Decomposition&quot; 60</span><br><span class="line">    &quot;2.9 The Moore-Penrose Pseudoinverse&quot; 61</span><br><span class="line">    &quot;2.10 The Trace Operator&quot; 62</span><br><span class="line">    &quot;2.11 The Determinant&quot; 63</span><br><span class="line">    &quot;2.12 Example: Principal Components Analysis&quot; 64</span><br><span class="line">&quot;Probability and Information Theory&quot; 69</span><br><span class="line">    &quot;3.1 Why Probability?&quot; 70</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>实际上，如果不需要对目录文件进行修改的话，可以使用管道，将第二步和第三步一起执行。下面会说到。</p>
+<p>如果目录文件正常，是我们想要的效果，就可以进入最后一步了。</p>
+<h2 id="第三步，将目录导入pdf中"><a href="#第三步，将目录导入pdf中" class="headerlink" title="第三步，将目录导入pdf中"></a>第三步，将目录导入pdf中</h2><p>这一步也非常简单，需要用到目录文件，原始pdf文件</p>
+<p>命令如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdftocio -o 目标文件名 原始pdf文件 &lt; 目录文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="举例-2"><a href="#举例-2" class="headerlink" title="举例"></a>举例</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdftocio -o result.pdf testbook.pdf &lt; toc</span><br></pre></td></tr></table></figure>
+
+<p>result.pdf就是文章最初，效果展示里面有目录的那个文件</p>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202305081110956.png" alt="image-20230508110929077"></p>
+<p>我们成功的为pdf生成了目录。</p>
+<h3 id="结合第二步与第三步"><a href="#结合第二步与第三步" class="headerlink" title="结合第二步与第三步"></a>结合第二步与第三步</h3><p>只需用管道结合两步的命令即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pdftocgen testbook.pdf &lt; recipe.toml | pdftocio testbook.pdf -o result.pdf</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-最后"><a href="#3-最后" class="headerlink" title="3. 最后"></a>3. 最后</h1><p>因为这个工具是根据有限的信息推导出目录，所以如果pdf的格式越特殊，出错的可能性就越大，这是无法避免的。不过工具提供了很大的自由，我们可以编辑每一步的输出，来尽量达到我们想要的效果。同时这个工具还有很多更细节，更高级的用法，大家如果感兴趣，可以去看<a target="_blank" rel="noopener" href="https://krasjet.com/voice/pdf.tocgen/">官方文档</a>(英文)</p>
+
       
     </div>
 
@@ -457,10 +825,10 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/21/%E8%87%AA%E6%90%ADVPS%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/03/23/Docker%E5%85%A5%E9%97%A8%E4%B8%8EDocker%E7%BD%91%E7%BB%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
       <meta itemprop="name" content="Jason Li">
     </span>
 
@@ -475,7 +843,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/21/%E8%87%AA%E6%90%ADVPS%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">自搭VPS折腾记录</a>
+          <a href="/2023/03/23/Docker%E5%85%A5%E9%97%A8%E4%B8%8EDocker%E7%BD%91%E7%BB%9C/" class="post-title-link" itemprop="url">Docker入门与Docker网络</a>
         </h2>
 
         <div class="post-meta-container">
@@ -486,7 +854,185 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2025-02-21 18:11:11" itemprop="dateCreated datePublished" datetime="2025-02-21T18:11:11+08:00">2025-02-21</time>
+      <time title="创建时间：2023-03-23 14:28:32" itemprop="dateCreated datePublished" datetime="2023-03-23T14:28:32+08:00">2023-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-25 01:27:59" itemprop="dateModified" datetime="2023-10-25T01:27:59+08:00">2023-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>919</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>容器是另外一种轻量级的虚拟化，容器是共用主 机内核，利用内核的虚拟化技术隔离出一个独立的运行环境，拥有独立的一个文件系统，网络空间，进程空间视图等</p>
+<p><strong>容器与虚拟机的区别</strong></p>
+<p>容器跟虚拟机很相似，但是依然有不同，容器与虚拟机本质的区别是：</p>
+<p>容器是进程级别的资源隔离。虚拟机是操作系统级别的资源隔离</p>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>Docker是一个开源的容器化平台，在Linux，Windows，Mac上都可以使用。</p>
+<p>Docker可以分为三部分：</p>
+<ul>
+<li><p>Docker client</p>
+<p>Docker客户端是命令行工具，它与Docker守护进程(deamon)通信，用于创建、管理和操作Docker容器、镜像、网络等资源。Docker客户端可以在本地或远程计算机上运行，以便与Docker守护进程通信。</p>
+</li>
+<li><p>Docker deamon</p>
+<p>Docker守护进程是运行在主机上的后台进程，负责管理Docker容器、镜像、网络等资源。它通过与Docker客户端通信来响应请求，包括创建、启动、停止、删除容器等操作。</p>
+</li>
+<li><p>Docker registry</p>
+<p>Docker镜像库是Docker镜像(Docker image)的存储库，可以存储和分享Docker镜像</p>
+</li>
+</ul>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303231427101.png" alt="image-20230323142740024"></p>
+<p>Docker deamon必须运行在Linux上。所以Window或Mac上都是用的是Docker Desktop。Docker Desktop在电脑上创建一个Linux虚拟机，将Docker deamon运行在Linunx上，并为用户提供Docker client，来与Docker deamon进行交互。</p>
+<h3 id="docker-run命令"><a href="#docker-run命令" class="headerlink" title="docker run命令"></a>docker run命令</h3><p>docker run …</p>
+<ul>
+<li><p><code>-d</code>: 后台运行容器，并返回容器ID</p>
+</li>
+<li><p><code>-i</code>: 以交互模式运行容器，通常与 <code>-t</code> 同时使用</p>
+</li>
+<li><p><code>-t</code>: 为容器重新分配一个伪输入终端，通常与 <code>-i</code> 同时使用</p>
+</li>
+<li><p><code>-p</code>: 指定（发布）端口映射，格式为：主机(宿主)端口:容器端口</p>
+<p>这是小写的p</p>
+</li>
+<li><p><code>-P</code>: 随机端口映射，容器内部端口随机映射到主机的高端口</p>
+<p>这是大写的P</p>
+</li>
+<li><p><code>--name=nginx-lb</code>: 为容器指定一个名称</p>
+</li>
+<li><p><code>-e username=ritchie</code>: 设置环境变量</p>
+</li>
+<li><p><code>--env-file=c:/temp1/t1.txt</code>: 从指定文件读入环境变量</p>
+</li>
+<li><p><code>--expose=2000-2002</code>: 开放（暴露）一个端口或一组端口；</p>
+</li>
+<li><p><code>--link my_sql:sql_server</code> : 添加链接到另一个容器</p>
+</li>
+<li><p><code>-v C:\temp:/data</code>: 绑定一个卷(volume)</p>
+<p>冒号左边是宿主机目录格式，右边是Linux目录格式</p>
+</li>
+<li><p><code>--rm</code> 退出时自动删除容器</p>
+</li>
+</ul>
+<h2 id="Docker网络"><a href="#Docker网络" class="headerlink" title="Docker网络"></a>Docker网络</h2><p>Docker网络有四种类型，分别是：</p>
+<ul>
+<li><p>Bridge</p>
+<p>桥接式网络模式，也是默认的网络模式</p>
+</li>
+<li><p>Host</p>
+</li>
+<li><p>开放式网络模式，和宿主机共享网络</p>
+</li>
+<li><p>Container</p>
+</li>
+<li><p>联合挂载式网络模式，和其他容器共享网络</p>
+</li>
+<li><p>None</p>
+</li>
+<li><p>封闭式网络模式，不为容器配置网络</p>
+</li>
+</ul>
+<p>ps.从Windows宿主机是无法ping通Docker容器的，但从容器里可以ping通宿主机。因为容器是在一个Linux虚拟机里，宿主机是看不到的。但是从容器到宿主机是有网关的，所以可以通信。</p>
+<h3 id="下面主要讲一下Bridge网络"><a href="#下面主要讲一下Bridge网络" class="headerlink" title="下面主要讲一下Bridge网络"></a>下面主要讲一下Bridge网络</h3><p>Bridge网络使用虚拟网桥。连接到同一个网桥上容器是可以互相通信的，不同网桥之间的容器一般是不能互相通信的。</p>
+<p>Docker启动时会会默认创建一个bridge网络，如果不自行创建新的网络，那么创建的容器默认都在这个bridge上。</p>
+<p>如果不同bridge之间的容器想要通信怎么办：</p>
+<p>只需用<code>docker network connect</code>命令将容器搭到另一个bridge上即可。这样该容器会有不止一个ip地址，同一bridge下的ip可以互相ping通</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/06/%E8%87%AA%E6%90%ADVPS%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
+      <meta itemprop="name" content="Jason Li">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Code Crafting">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Code Crafting">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/02/06/%E8%87%AA%E6%90%ADVPS%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">自搭VPS折腾记录</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-02-06 13:03:45" itemprop="dateCreated datePublished" datetime="2023-02-06T13:03:45+08:00">2023-02-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-25 01:28:50" itemprop="dateModified" datetime="2023-10-25T01:28:50+08:00">2023-10-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -536,14 +1082,120 @@
 <li><p>服务器获取来源：Azure student</p>
 </li>
 </ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/02/21/%E8%87%AA%E6%90%ADVPS%E6%8A%98%E8%85%BE%E8%AE%B0%E5%BD%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>凡是以<code>[root]#</code>开头均表示需要以root身份执行命令</p>
+<p>各命令的命令行输出不一定相同，大家自行判断是否执行成功</p>
+<h1 id="一、配置Google-BBR"><a href="#一、配置Google-BBR" class="headerlink" title="一、配置Google BBR"></a>一、配置Google BBR</h1><p>BBR是Google的一套网络拥塞控制算法，用在VPS服务器上，可以有效减少拥堵丢包，大幅提高网络连接和翻墙速度。大家可自行选择是否需要BBR。</p>
+<p>因为CentOS7内核版本较低，没有内置BBR，所以需要升级内核</p>
+<p>如果是其他已内置BBR的系统，如Debian 9或更高版本的 Debian Linux，请直接参考<a target="_blank" rel="noopener" href="https://github.com/bannedbook/fanqiang/blob/master/v2ss/%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84Google%20BBR%20%E4%B8%80%E9%94%AE%E5%8A%A0%E9%80%9FVPS%E6%95%99%E7%A8%8B.md">这个教程</a></p>
+<h2 id="1-升级内核"><a href="#1-升级内核" class="headerlink" title="1. 升级内核"></a>1. 升级内核</h2><h3 id="1-升级源"><a href="#1-升级源" class="headerlink" title="1 升级源"></a>1 升级源</h3><p><code>yum update</code></p>
+<h3 id="2-安装elrepo并升级内核："><a href="#2-安装elrepo并升级内核：" class="headerlink" title="2 安装elrepo并升级内核："></a>2 安装elrepo并升级内核：</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm</span></span><br><span class="line">Retrieving http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm</span><br><span class="line">Retrieving http://elrepo.org/elrepo-release-7.0-4.el7.elrepo.noarch.rpm</span><br><span class="line">Preparing...                          ################################# [100%]</span><br><span class="line">Updating / installing...</span><br><span class="line">   1:elrepo-release-7.0-4.el7.elrepo  ################################# [100%]</span><br><span class="line">   </span><br><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">yum --enablerepo=elrepo-kernel install kernel-ml -y</span></span><br><span class="line">Loaded plugins: fastestmirror, langpacks, product-id, search-disabled-repos, subscription-manager</span><br><span class="line"></span><br><span class="line">This system is not registered with an entitlement server. You can use subscription-manager to register.</span><br><span class="line"></span><br><span class="line">Loading mirror speeds from cached hostfile</span><br><span class="line"> * elrepo: mirrors.thzhost.com</span><br><span class="line"> * elrepo-kernel: mirrors.thzhost.com</span><br><span class="line">elrepo                                                                          | 3.0 kB  00:00:00     </span><br><span class="line">elrepo-kernel                                                                   | 3.0 kB  00:00:00     </span><br><span class="line">(1/2): elrepo/primary_db                                                        | 457 kB  00:00:00     </span><br><span class="line">(2/2): elrepo-kernel/primary_db                                                 | 2.1 MB  00:00:00     </span><br><span class="line">Resolving Dependencies</span><br><span class="line"><span class="meta prompt_">--&gt; </span><span class="language-bash">Running transaction check</span></span><br><span class="line"><span class="meta prompt_">---&gt; </span><span class="language-bash">Package kernel-ml.x86_64 0:6.1.9-1.el7.elrepo will be installed</span></span><br><span class="line"><span class="meta prompt_">--&gt; </span><span class="language-bash">Finished Dependency Resolution</span></span><br><span class="line"></span><br><span class="line">Dependencies Resolved</span><br><span class="line"></span><br><span class="line">=======================================================================================================</span><br><span class="line"> Package              Arch              Version                         Repository                Size</span><br><span class="line">=======================================================================================================</span><br><span class="line">Installing:</span><br><span class="line"> kernel-ml            x86_64            6.1.9-1.el7.elrepo              elrepo-kernel             60 M</span><br><span class="line"></span><br><span class="line">Transaction Summary</span><br><span class="line">=======================================================================================================</span><br><span class="line">Install  1 Package</span><br><span class="line"></span><br><span class="line">Total download size: 60 M</span><br><span class="line">Installed size: 284 M</span><br><span class="line">Downloading packages:</span><br><span class="line">kernel-ml-6.1.9-1.el7.elrepo.x86_64.rpm                                         |  60 MB  00:00:02     </span><br><span class="line">Running transaction check</span><br><span class="line">Running transaction test</span><br><span class="line">Transaction test succeeded</span><br><span class="line">Running transaction</span><br><span class="line">Warning: RPMDB altered outside of yum.</span><br><span class="line">  Installing : kernel-ml-6.1.9-1.el7.elrepo.x86_64                                                 1/1 </span><br><span class="line">  Verifying  : kernel-ml-6.1.9-1.el7.elrepo.x86_64                                                 1/1 </span><br><span class="line"></span><br><span class="line">Installed:</span><br><span class="line">  kernel-ml.x86_64 0:6.1.9-1.el7.elrepo                                                                </span><br><span class="line"></span><br><span class="line">Complete!</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-查看现在的内核"><a href="#3-查看现在的内核" class="headerlink" title="3 查看现在的内核"></a>3 查看现在的内核</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root]# uname -r</span><br><span class="line">3.10.0-1160.71.1.el7.x86_64</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-更新grub文件并重启"><a href="#4-更新grub文件并重启" class="headerlink" title="4 更新grub文件并重启"></a>4 更新grub文件并重启</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">egrep ^menuentry /etc/grub2.cfg | <span class="built_in">cut</span> -f 2 -d \<span class="string">&#x27;</span></span></span><br><span class="line">CentOS Linux (6.1.9-1.el7.elrepo.x86_64) 7 (Core)</span><br><span class="line">CentOS Linux (3.10.0-1160.71.1.el7.x86_64) 7 (Core)</span><br><span class="line">CentOS Linux (3.10.0-957.27.2.el7.x86_64) 7 (Core)</span><br><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash"><span class="string">grub2-set-default 0</span></span></span><br><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash"><span class="string">reboot</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-查看内核版本是否以更新"><a href="#5-查看内核版本是否以更新" class="headerlink" title="5 查看内核版本是否以更新"></a>5 查看内核版本是否以更新</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[CentOS]# uname -r</span><br><span class="line">6.1.9-1.el7.elrepo.x86_64</span><br></pre></td></tr></table></figure>
+
+<p>已更新成功</p>
+<h2 id="2-开启BBR"><a href="#2-开启BBR" class="headerlink" title="2 开启BBR"></a>2 开启BBR</h2><h3 id="1-开启BBR"><a href="#1-开启BBR" class="headerlink" title="1 开启BBR"></a>1 开启BBR</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">vi /etc/sysctl.conf</span> </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">在文件末尾添加如下内容</span></span><br><span class="line">net.core.default_qdisc = fq</span><br><span class="line">net.ipv4.tcp_congestion_control = bbr</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-加载系统参数"><a href="#2-加载系统参数" class="headerlink" title="2 加载系统参数"></a>2 加载系统参数</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">sysctl -p</span></span><br><span class="line">net.core.default_qdisc = fq</span><br><span class="line">net.ipv4.tcp_congestion_control = bbr</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-确认BBR已经开启"><a href="#3-确认BBR已经开启" class="headerlink" title="3 确认BBR已经开启"></a>3 确认BBR已经开启</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">sysctl net.ipv4.tcp_available_congestion_control</span></span><br><span class="line">net.ipv4.tcp_available_congestion_control = reno cubic bbr</span><br><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">lsmod | grep bbr</span></span><br><span class="line">tcp_bbr                20480  2 </span><br></pre></td></tr></table></figure>
+
+<h2 id="3-配置BBR"><a href="#3-配置BBR" class="headerlink" title="3 配置BBR"></a>3 配置BBR</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">wget https://raw.githubusercontent.com/bannedbook/fanqiang/master/v2ss/server-cfg/sysctl.conf  -O -&gt; /etc/sysctl.conf</span></span><br><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">sysctl -p</span></span><br><span class="line">fs.file-max = 655350</span><br><span class="line">net.core.default_qdisc = fq</span><br><span class="line">net.ipv4.tcp_congestion_control = bbr</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、安装V2ray服务端"><a href="#二、安装V2ray服务端" class="headerlink" title="二、安装V2ray服务端"></a>二、安装V2ray服务端</h1><h2 id="1-时间校准"><a href="#1-时间校准" class="headerlink" title="1 时间校准"></a>1 时间校准</h2><p>时间需要和PC符合，不然无法使用。</p>
+<p>可用<code>date</code>命令查看时间。若时间不一致，搜索修改服务器时间。</p>
+<h2 id="2-服务器安装v2ray"><a href="#2-服务器安装v2ray" class="headerlink" title="2 服务器安装v2ray"></a>2 服务器安装v2ray</h2><h3 id="直接使用官方安装脚本"><a href="#直接使用官方安装脚本" class="headerlink" title="直接使用官方安装脚本"></a>直接使用官方安装脚本</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">bash &lt;(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)</span></span><br><span class="line"><span class="meta prompt_">  % </span><span class="language-bash">Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</span></span><br><span class="line">                                 Dload  Upload   Total   Spent    Left  Speed</span><br><span class="line">100 22189  100 22189    0     0  42528      0 --:--:-- --:--:-- --:--:-- 42589</span><br><span class="line">info: Installing V2Ray v5.2.1 for x86_64</span><br><span class="line">Downloading V2Ray archive: https://github.com/v2fly/v2ray-core/releases/download/v5.2.1/v2ray-linux-64.zip</span><br><span class="line"><span class="meta prompt_">  % </span><span class="language-bash">Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</span></span><br><span class="line">                                 Dload  Upload   Total   Spent    Left  Speed</span><br><span class="line">  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</span><br><span class="line">100 11.0M  100 11.0M    0     0  10.9M      0  0:00:01  0:00:01 --:--:-- 10.9M</span><br><span class="line">Downloading verification file for V2Ray archive: https://github.com/v2fly/v2ray-core/releases/download/v5.2.1/v2ray-linux-64.zip.dgst</span><br><span class="line">info: Extract the V2Ray package to /tmp/tmp.WBXwFCQmXY and prepare it for installation.</span><br><span class="line">info: Systemd service files have been installed successfully!</span><br><span class="line">warning: The following are the actual parameters for the v2ray service startup.</span><br><span class="line">warning: Please make sure the configuration file path is correctly set.</span><br><span class="line">~~~~~~~~~~~~~~~~</span><br><span class="line">[Unit]</span><br><span class="line">Description=V2Ray Service</span><br><span class="line">Documentation=https://www.v2fly.org/</span><br><span class="line">After=network.target nss-lookup.target</span><br><span class="line"></span><br><span class="line">[Service]</span><br><span class="line">User=nobody</span><br><span class="line">CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE</span><br><span class="line">AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE</span><br><span class="line">NoNewPrivileges=true</span><br><span class="line">ExecStart=/usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json</span><br><span class="line">Restart=on-failure</span><br><span class="line">RestartPreventExitStatus=23</span><br><span class="line"></span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">In <span class="keyword">case</span> you have a good reason to <span class="keyword">do</span> so, duplicate this file <span class="keyword">in</span> the same directory and make your customizes there.</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Or all changes you made will be lost!  <span class="comment"># Refer: https://www.freedesktop.org/software/systemd/man/systemd.unit.html</span></span></span><br><span class="line">[Service]</span><br><span class="line">ExecStart=</span><br><span class="line">ExecStart=/usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json</span><br><span class="line">~~~~~~~~~~~~~~~~</span><br><span class="line">warning: The systemd version on the current operating system is too low.</span><br><span class="line">warning: Please consider to upgrade the systemd or the operating system.</span><br><span class="line"></span><br><span class="line">installed: /usr/local/bin/v2ray</span><br><span class="line">installed: /usr/local/share/v2ray/geoip.dat</span><br><span class="line">installed: /usr/local/share/v2ray/geosite.dat</span><br><span class="line">installed: /usr/local/etc/v2ray/config.json</span><br><span class="line">installed: /var/log/v2ray/</span><br><span class="line">installed: /var/log/v2ray/access.log</span><br><span class="line">installed: /var/log/v2ray/error.log</span><br><span class="line">installed: /etc/systemd/system/v2ray.service</span><br><span class="line">installed: /etc/systemd/system/v2ray@.service</span><br><span class="line">removed: /tmp/tmp.WBXwFCQmXY</span><br><span class="line">info: V2Ray v5.2.1 is installed.</span><br><span class="line">You may need to execute a command to remove dependent software: yum remove curl unzip</span><br><span class="line">Please execute the command: systemctl enable v2ray; systemctl start v2ray</span><br></pre></td></tr></table></figure>
+
+<h3 id="试运行"><a href="#试运行" class="headerlink" title="试运行"></a>试运行</h3><p>安装完之后，使用以下命令启动 V2Ray:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">systemctl start v2ray</span></span><br></pre></td></tr></table></figure>
+
+<p>在首次安装完成之后，V2Ray 不会自动启动，需要手动运行上述启动命令。</p>
+<p>设置开机自启动 V2Ray:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">systemctl <span class="built_in">enable</span> v2ray</span></span><br><span class="line">Created symlink from /etc/systemd/system/multi-user.target.wants/v2ray.service to /etc/systemd/system/v2ray.service.</span><br></pre></td></tr></table></figure>
+
+<p>接下来看看 V2ray 是不是真的运行起来了:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">systemctl status v2ray</span></span><br><span class="line">● v2ray.service - V2Ray Service</span><br><span class="line">   Loaded: loaded (/etc/systemd/system/v2ray.service; enabled; vendor preset: disabled)</span><br><span class="line">  Drop-In: /etc/systemd/system/v2ray.service.d</span><br><span class="line">           └─10-donot_touch_single_conf.conf</span><br><span class="line">   Active: active (running) since Mon 2023-02-06 14:25:37 CST; 51s ago</span><br><span class="line">     Docs: https://www.v2fly.org/</span><br><span class="line"> Main PID: 2354 (v2ray)</span><br><span class="line">   CGroup: /system.slice/v2ray.service</span><br><span class="line">           └─2354 /usr/local/bin/v2ray run -config /usr/local/etc/v2ray/config.json</span><br><span class="line"></span><br><span class="line">Feb 06 14:25:37 hachaos systemd[1]: Started V2Ray Service.</span><br><span class="line">Feb 06 14:25:37 hachaos v2ray[2354]: V2Ray 5.2.1 (V2Fly, a community-driven edition of V2Ray.) C...d64)</span><br><span class="line">Feb 06 14:25:37 hachaos v2ray[2354]: A unified platform for anti-censorship.</span><br><span class="line">Feb 06 14:25:37 hachaos v2ray[2354]: 2023/02/06 14:25:37 [Warning] V2Ray 5.2.1 started</span><br><span class="line">Hint: Some lines were ellipsized, use -l to show in full.</span><br></pre></td></tr></table></figure>
+
+<p>看到类似于这样的提示就算启动成功了。</p>
+<p>但是由于此时还没有配置V2Ray，所以先关掉：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root]# systemctl stop v2ray</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-配置V2Ray"><a href="#3-配置V2Ray" class="headerlink" title="3 配置V2Ray"></a>3 配置V2Ray</h2><h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root]# </span><span class="language-bash">vi /usr/local/etc/v2ray/config.json</span></span><br></pre></td></tr></table></figure>
+<p>写入下列内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;inbounds&quot;: [&#123;</span><br><span class="line">    &quot;port&quot;: 10086, // 服务器监听端口,自行修改</span><br><span class="line">    &quot;protocol&quot;: &quot;vmess&quot;,</span><br><span class="line">    &quot;settings&quot;: &#123;</span><br><span class="line">      &quot;clients&quot;: [&#123;</span><br><span class="line">        &quot;id&quot;: &quot;b831381d-6324-4d53-ad4f-8cda48b30811&quot;, //uuid， 自行修改</span><br><span class="line">        &quot;alterId&quot;: 64</span><br><span class="line">         &#125;]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;],</span><br><span class="line">  &quot;outbounds&quot;: [&#123;</span><br><span class="line">    &quot;protocol&quot;: &quot;freedom&quot;,</span><br><span class="line">    &quot;settings&quot;: &#123;&#125;</span><br><span class="line">  &#125;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件中的<code>port</code>，数字随意，建议四位或五位数；<br>接着修改<code>id</code>，这个id是指UUID，好比账号密码，要获取UUID可以去这个 <a target="_blank" rel="noopener" href="https://www.uuidgenerator.net/">UUID Generator </a>网站，每次刷新网页会随机生成一个UUID；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 测试配置文件</span><br><span class="line">[root]# /usr/local/bin/v2ray test -config /usr/local/etc/v2ray/config.json</span><br><span class="line">V2Ray 5.2.1 (V2Fly, a community-driven edition of V2Ray.) Custom (go1.19.4 linux/amd64)</span><br><span class="line">A unified platform for anti-censorship.</span><br><span class="line">Configuration OK.</span><br></pre></td></tr></table></figure>
+
+<p>输出这样就表示配置文件没有问题。</p>
+<p>接下来启动V2Ray</p>
+<p><code>service v2ray start</code></p>
+<h3 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h3><p>根据配置文件自己设置的端口，在服务器内或服务器管理网站开放相应端口。</p>
+<h3 id="V2Ray常用命令："><a href="#V2Ray常用命令：" class="headerlink" title="V2Ray常用命令："></a>V2Ray常用命令：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#启动 V2Ray</span><br><span class="line">service v2ray start</span><br><span class="line">#暂停 V2Ray</span><br><span class="line">service v2ray stop</span><br><span class="line">#查看 V2Ray 状态</span><br><span class="line">service v2ray status</span><br><span class="line">#重启 V2Ray</span><br><span class="line">service v2ray restart</span><br><span class="line">#重装 V2Ray</span><br><span class="line">service v2ray reload</span><br><span class="line">#强制重装 V2Ray</span><br><span class="line">service v2ray force-reload</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-安装配置V2Ray客户端-MacOS"><a href="#4-安装配置V2Ray客户端-MacOS" class="headerlink" title="4 安装配置V2Ray客户端(MacOS)"></a>4 安装配置V2Ray客户端(MacOS)</h1><p>网上大多都是windows教程，所以这里重点写一下macOS教程</p>
+<h2 id="下载客户端软件"><a href="#下载客户端软件" class="headerlink" title="下载客户端软件"></a>下载客户端软件</h2><p>我选择的是<a target="_blank" rel="noopener" href="https://github.com/Qv2ray/Qv2ray">Qv2ray</a>作为图形界面客户端。直接在GitHub上找到最新release下载macOS版本即可</p>
+<h2 id="配置电脑与客户端"><a href="#配置电脑与客户端" class="headerlink" title="配置电脑与客户端"></a>配置电脑与客户端</h2><p>Qv2ray只是一个图形界面客户端，我们依然需要自行在电脑上下载v2ray即<a target="_blank" rel="noopener" href="https://github.com/v2fly/v2ray-core">v2ray-core</a>，它的官方下载教程在<a target="_blank" rel="noopener" href="https://www.v2fly.org/guide/install.html">这里</a>，但是我安装时电脑的行为与官方教程上有些不同，下面是我的下载过程：</p>
+<h3 id="1-homebrew包管理器安装v2ray"><a href="#1-homebrew包管理器安装v2ray" class="headerlink" title="1 homebrew包管理器安装v2ray"></a>1 homebrew包管理器安装v2ray</h3><p>如果没有homebrew，请先安装homebrew，其<a target="_blank" rel="noopener" href="https://brew.sh/">官网</a>有安装命令</p>
+<p>有homebrew后，命令行运行<code>brew install v2ray</code></p>
+<p>查看是否安装成功并获取安装路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ where v2ray</span><br><span class="line">/opt/homebrew/bin/v2ray</span><br></pre></td></tr></table></figure>
+
+<p>得到如上返回就说明已经成功安装v2ray，同时记录下改路径，后面会用到。</p>
+<blockquote>
+<p>我用的是zsh，直接有where命令，如果没有where命令，可以使用其他命令</p>
+</blockquote>
+<h3 id="2-下载资源文件"><a href="#2-下载资源文件" class="headerlink" title="2 下载资源文件"></a>2 下载资源文件</h3><p>官方教程在这里说“随命令一起下载的 geosite.dat 和 geoip.dat 放置在 <code>/usr/local/share/v2ray/</code> 目录下”。但是我用“where”命令并没有找到这两个文件。所以需要自己下载</p>
+<p>于是在 <a target="_blank" rel="noopener" href="https://github.com/v2fly/v2ray-core/releases">Github Releases</a> 下载适用于 macOS 平台的 ZIP 压缩包，解压后里面有相应的资源文件，即以<code>.dat</code>结尾的文件。(同时还有v2ray可执行文件，因为已经下载了v2ray，该文件可以删除)</p>
+<p>将资源文件放在电脑上的某个目录下即可</p>
+<h3 id="3-配置客户端"><a href="#3-配置客户端" class="headerlink" title="3 配置客户端"></a>3 配置客户端</h3><ol>
+<li><p>首先打开<code>首选项</code>，找到<code>内核设置</code>部分</p>
+<p> <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743302.png" alt="preference"></p>
+<p> <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743304.png" alt="image-20230222125317902"></p>
+<p> 这里需要修改两个地方，一个是v2ray核心可执行文件路径，将这里修改成第一步里命令行得到的路径。第二个是v2ray资源目录，将这里修改成第二步下载的文件夹的路径。然后点击检查v2ray核心设置</p>
+<p> <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743305.png" alt="image-20230222125528308"></p>
+<p> 得到如上提示说明设置成功。如果是其他提示则说明设置有误，需修改直至设置正确。</p>
+</li>
+<li><p>添加服务器信息</p>
+<p> 设置好之后，在主界面点击<code>新建</code></p>
+<p> <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743306.png" alt="new"></p>
+<p> 会出现如下界面</p>
+<p> <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743307.png" alt="image-20230222130411955"></p>
+<ul>
+<li><p>随意填一个标签</p>
+</li>
+<li><p>主机写自己主机的ip地址或域名(如果有的话)</p>
+</li>
+<li><p>端口填写自己在服务器上config.jason里配置的端口</p>
+</li>
+<li><p>类型就是VMess</p>
+</li>
+<li><p>uuid填写自己在服务器上config.jason里配置的uuid(即id)</p>
+</li>
+<li><p>Alter也与服务器上配置保持相同即可，保持默认也无所谓</p>
+</li>
+<li><p>安全选项保持默认auto即可</p>
+</li>
+<li><p>传输协保持默认tcp即可</p>
+</li>
+</ul>
+<p> 其他均不需修改</p>
+<p> 修改完成后点击ok保存</p>
+<p> 这时候主界面就已经有自己的配置了</p>
+</li>
+<li><p>运行</p>
+<p> 选择相应配置，点击<code>连接</code>即可</p>
+<p> <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743308.png" alt="start"></p>
+<p> 连接成功后，可以打开YouTube试试是否可以科学上网。如果可以打开，则说明配置成功。</p>
+</li>
+</ol>
+<h1 id="5-安装配置V2Ray客户端-Windows"><a href="#5-安装配置V2Ray客户端-Windows" class="headerlink" title="5 安装配置V2Ray客户端(Windows)"></a>5 安装配置V2Ray客户端(Windows)</h1><p>这部分可以参考<a target="_blank" rel="noopener" href="https://github.com/bannedbook/fanqiang/blob/master/v2ss/Windows%E7%89%88V2ray%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97.md">这个教程</a></p>
+<h1 id="三、-结局"><a href="#三、-结局" class="headerlink" title="三、 结局"></a>三、 结局</h1><p>这是一个悲伤的故事，刚搭好后，用起来很爽。结果没过几天突然用不了了。在<a target="_blank" rel="noopener" href="https://port.ping.pe上测试了一下tcp通信是否顺畅,发现所有来自大陆的请求都失败了.极大概率是ip被ban了.没想到被封的是如此迅速./">https://port.ping.pe上测试了一下tcp通信是否顺畅，发现所有来自大陆的请求都失败了。极大概率是IP被ban了。没想到被封的是如此迅速。</a></p>
+<p>大家自己搭建V2ray的话，一定要选择可以更换ip的服务器提供商，比如Vultr。或者可以尝试V2Ray+TLS翻墙以及V2Ray+TLS+BebSocket的方式。这些我没有试过，大家可以自己找一下教程。</p>
+
       
     </div>
 
@@ -569,10 +1221,10 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202309211632696.jpg">
       <meta itemprop="name" content="Jason Li">
     </span>
 
@@ -587,7 +1239,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">设计模式概述</a>
+          <a href="/2023/02/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">设计模式概述</a>
         </h2>
 
         <div class="post-meta-container">
@@ -598,7 +1250,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2025-02-21 18:11:11" itemprop="dateCreated datePublished" datetime="2025-02-21T18:11:11+08:00">2025-02-21</time>
+      <time title="创建时间：2023-02-03 19:54:25" itemprop="dateCreated datePublished" datetime="2023-02-03T19:54:25+08:00">2023-02-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-25 01:29:07" itemprop="dateModified" datetime="2023-10-25T01:29:07+08:00">2023-10-25</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -637,338 +1296,80 @@
     <div class="post-body" itemprop="articleBody">
           <p>这篇文章主要概括性地讲一下设计模式和它的一些原则。目的是让读者能对设计模式有一个整体上的了解与感受，为深入学习设计模式打下基础。</p>
 <h1 id="从“模式”讲起"><a href="#从“模式”讲起" class="headerlink" title="从“模式”讲起"></a>从“模式”讲起</h1><p>​	“模式”一词最早诞生于建筑领域，在Christopher Alexander教授的一书中，他写道“每一个模式描述了一个在我们周围不断重复发生的问题，以及该问题的解决方案的核心。这样，你就能一次又一次地使用该方案而不必做重复劳动”。后来“模式”这个概念被用于软件开发中，尤其是面向对象编程中。在面向对象设计模式中，核心的思想依然是这样。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/02/21/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/21/Docker%E5%85%A5%E9%97%A8%E4%B8%8EDocker%E7%BD%91%E7%BB%9C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jason Li">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Code Crafting">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Code Crafting">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/21/Docker%E5%85%A5%E9%97%A8%E4%B8%8EDocker%E7%BD%91%E7%BB%9C/" class="post-title-link" itemprop="url">Docker入门与Docker网络</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-02-21 18:11:11" itemprop="dateCreated datePublished" datetime="2025-02-21T18:11:11+08:00">2025-02-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">开发</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>920</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><p>容器是另外一种轻量级的虚拟化，容器是共用主 机内核，利用内核的虚拟化技术隔离出一个独立的运行环境，拥有独立的一个文件系统，网络空间，进程空间视图等</p>
-<p><strong>容器与虚拟机的区别</strong></p>
-<p>容器跟虚拟机很相似，但是依然有不同，容器与虚拟机本质的区别是：</p>
-<p>容器是进程级别的资源隔离。虚拟机是操作系统级别的资源隔离</p>
-<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>Docker是一个开源的容器化平台，在Linux，Windows，Mac上都可以使用。</p>
-<p>Docker可以分为三部分：</p>
+<p>​	设计模式（design pattern）是软件开发中广泛使用的解决方案，用于解决在日常工作中遇到的常见问题。它们是对重复的设计问题的可重复使用的解决方案，它们提供了一种封装和组织代码的方法，使代码更易于维护，理解和扩展。</p>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743430.webp" alt="设计模式"></p>
+<h1 id="设计模式的基本要素"><a href="#设计模式的基本要素" class="headerlink" title="设计模式的基本要素"></a>设计模式的基本要素</h1><p>一般而言，一个模式有四个基本要素(维基百科上有更多的要素，这里讲最主要的四个): </p>
+<ol>
+<li><p>模式名称与分类(Pattern Name and classification)：模式的名称与分类使我们易于表达与交流某一种设计。也让模式便于记忆。</p>
+</li>
+<li><p>问题(Problem)：该模式是为了解决面向对象设计中所遇到的哪类问题或情况。</p>
+</li>
+<li><p>解决方案(Solution)：模式的具体内容。主要是设计结构(structure)，设计包含哪些类与对象(participants)、这些成分在模式中是如何使用和交互的(collaboration)。</p>
+</li>
+<li><p>效果(Consequences)：使用该模式所带来的结果(results)，以及所带来的副作用(side effects)和使用该模式的一些取舍(trade offs)</p>
+</li>
+</ol>
+<h1 id="设计模式的原则"><a href="#设计模式的原则" class="headerlink" title="设计模式的原则"></a>设计模式的原则</h1><p>​	设计模式基于七个核心原则，包括：单一职责原则、开放封闭原则、里氏替换原则、接口隔离原则、依赖倒置原则、迪米特法则、组合&#x2F;聚合复用原则。其中前五个原则一般统称为SOLID原则。</p>
+<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743433.png" alt="SOLID Principles In Practice. Every developer must know… | by Didem Eren |  Medium"></p>
+<p>(图片来源网络)	</p>
+<p>下面就来详细介绍这些原则。</p>
+<h3 id="1-单一职责原则（Single-Responsibility-Principle-SRP）"><a href="#1-单一职责原则（Single-Responsibility-Principle-SRP）" class="headerlink" title="1. 单一职责原则（Single Responsibility Principle, SRP）"></a>1. 单一职责原则（Single Responsibility Principle, SRP）</h3><p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743434.png" alt="The Single Responsibility Principle"></p>
+<p>(图片来源网络)	</p>
+<p>​	单一职责原则是指一个类只负责一个单独的功能领域中的相关职责，避免一个类承担太多的职责。</p>
+<p>​	假设我们要开发一个用于管理员工信息的系统，每个员工都有自己的信息，例如名字、工号、部门等。如果把所有的信息都写在一个类中，就违反了单一职责原则。</p>
+<p>​	下面是一种符合单一职责原则的设计方法：</p>
 <ul>
-<li><p>Docker client</p>
-<p>Docker客户端是命令行工具，它与Docker守护进程(deamon)通信，用于创建、管理和操作Docker容器、镜像、网络等资源。Docker客户端可以在本地或远程计算机上运行，以便与Docker守护进程通信。</p>
-</li>
-<li><p>Docker deamon</p>
-<p>Docker守护进程是运行在主机上的后台进程，负责管理Docker容器、镜像、网络等资源。它通过与Docker客户端通信来响应请求，包括创建、启动、停止、删除容器等操作。</p>
-</li>
+<li>定义一个<code>Employee</code>类，存储员工的基本信息。</li>
+<li>定义一个<code>Department</code>类，存储员工的部门信息。</li>
+<li>定义一个<code>EmployeeManager</code>类，负责管理员工的信息。</li>
 </ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/02/21/Docker%E5%85%A5%E9%97%A8%E4%B8%8EDocker%E7%BD%91%E7%BB%9C/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
+<p>​	这种设计方法把每个功能分配到单独的类中，每个类只负责一个单独的职责，符合单一职责原则。</p>
+<h3 id="2-开放-封闭原则（Open-Closed-Principle-OCP）"><a href="#2-开放-封闭原则（Open-Closed-Principle-OCP）" class="headerlink" title="2. 开放-封闭原则（Open-Closed Principle, OCP）"></a>2. 开放-封闭原则（Open-Closed Principle, OCP）</h3><p> <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743435.jpg" alt="open-closed principle"></p>
+<p>(图片来源网络)	</p>
+<p>​	开闭原则要求软件实体（如类、模块、函数等）要对扩展开放，对修改封闭。也就是说，当需要新的功能时，可以通过扩展现有的代码来实现，而不是修改已有的代码。这样做的好处是：</p>
+<ol>
+<li><p>可以保证原有代码的稳定性，因为没有修改已有代码；</p>
+</li>
+<li><p>可以节省维护代码的成本，因为不需要修改原有代码；</p>
+</li>
+<li><p>可以使代码更容易扩展，因为扩展新功能不需要修改已有代码。</p>
+</li>
+</ol>
+<p>​	举个例子：</p>
+<p>​	一个电商网站的购物车系统，假如现在网站支持普通用户和会员用户，普通用户可以享受折扣，而会员用户还可以享受免运费的优惠。如果按照开放封闭原则，我们可以在购物车系统的基础上新建两个<strong>子类</strong>：普通用户购物车和会员用户购物车。在普通用户购物车中实现折扣计算，在会员用户购物车中实现折扣和免运费计算。这样，当需要增加或修改优惠政策时，只需要修改对应的购物车子类，而不需要修改购物车系统的核心代码，从而避免了对原有代码的影响。</p>
+<h3 id="3-里氏替换原则（Liskov-Substitution-Principle-LSP）"><a href="#3-里氏替换原则（Liskov-Substitution-Principle-LSP）" class="headerlink" title="3. 里氏替换原则（Liskov Substitution Principle, LSP）"></a>3. 里氏替换原则（Liskov Substitution Principle, LSP）</h3><p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743436.png" alt="Liskov Substitution Principle"></p>
+<p>(图片来源网络)	</p>
+<p>​	里氏替换原则是面向对象编程中的一个重要原则，它提出了一个继承关系的限制：子类对象（对象实例）能够替换其父类对象（对象实例），而不会对程序的正确性造成影响。</p>
+<p>​	举个例子，如果有一个抽象类 <code>Animal</code>，它有一个子类 <code>Dog</code>，那么当在程序中使用<code>Animal</code>类型的引用指向 <code>Dog </code>类型的对象时，程序的正确性不会受到影响。也就是说，对于任何依赖于 <code>Animal </code>类型的代码，通过使用 <code>Dog </code>类型的对象都不会导致错误。</p>
+<p>​	里氏替换原则强调了继承关系的一致性和稳定性，保证了在程序中使用父类型的引用来引用子类型的对象时，程序的行为是可预期的，不会因为替换了对象类型而产生意外的行为。</p>
+<h3 id="4-接口隔离原则（Interface-Segregation-Principle-ISP）"><a href="#4-接口隔离原则（Interface-Segregation-Principle-ISP）" class="headerlink" title="4. 接口隔离原则（Interface Segregation Principle, ISP）"></a>4. 接口隔离原则（Interface Segregation Principle, ISP）</h3><p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743437.png" alt="Solid PHP - SOLID principles in PHP | Accesto Blog"></p>
+<p>(图片来源网络)	</p>
+<p>​	该原则提出了一个接口的设计原则：客户端不应该依赖它不需要的接口。一个类对另一个类的依赖应该建立在最小的接口上。</p>
+<p>​	换句话说，一个接口中不应该包含客户端不需要的操作，而应该把接口划分成多个独立的、明确的接口，以更好地隔离客户端与实现的耦合。</p>
+<p>​	接口隔离原则的目的是为了避免过多的依赖和冗余的接口，从而使得系统更加稳定、易于维护和扩展。</p>
+<p>​	举个例子，假如有一个动物园的系统，它有一个动物接口，里面定义了吃东西、睡觉、钓鱼等操作。但是有些动物只会吃东西和睡觉，而不会钓鱼，那么在这种情况下，我们可以把钓鱼操作从动物接口中分离出来，创建一个新的接口，以更好地满足接口隔离原则。</p>
+<h3 id="5-依赖倒置原则（Dependency-Inversion-Principle-DIP）"><a href="#5-依赖倒置原则（Dependency-Inversion-Principle-DIP）" class="headerlink" title="5. 依赖倒置原则（Dependency Inversion Principle, DIP）"></a>5. 依赖倒置原则（Dependency Inversion Principle, DIP）</h3><p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303131743438.png" alt="Why The Dependency Inversion Principle Is Worth Using - DEV Community  👩‍💻👨‍💻"></p>
+<p>(图片来源网络)	 </p>
+<p>​	该原则规定了模块间的依赖方向，高层模块不应该依赖低层模块，两者都应该依赖其抽象，这样可以使得代码结构更加灵活。主要思想是通过抽象接口和抽象类来隔离高层代码和低层代码，使得高层代码对低层代码的依赖性降低，提高代码的灵活性和可维护性。</p>
+<p>​	例如，在一个电商系统中，有一个高层模块，它负责管理订单；有一个低层模块，它负责对接支付系统。如果高层模块直接依赖于低层模块，那么如果支付系统的实现发生了变化，例如从支付宝换成了微信支付，那么高层模块就需要进行修改。为了避免这种情况，我们可以通过依赖倒置原则的思想，在高层模块和低层模块之间抽象出一个接口，让高层模块和低层模块都依赖于这个接口。这样，当支付系统的实现发生变化时，只需要修改低层模块的实现类即可，高层模块不需要进行任何修改。</p>
+<h3 id="6-迪米特法则（Law-of-Demeter-也称最少知识原则-LoD）"><a href="#6-迪米特法则（Law-of-Demeter-也称最少知识原则-LoD）" class="headerlink" title="6. 迪米特法则（Law of Demeter 也称最少知识原则, LoD）"></a>6. 迪米特法则（Law of Demeter 也称最少知识原则, LoD）</h3><p> <img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202303231445539.png" alt="image-20230323144543490"></p>
+<p>(图片来源网络)	</p>
+<p>该原则认为，一个对象应该尽可能少地了解其他对象的内部细节，并且只与直接相邻的对象进行交互。</p>
+<p>具体来说，迪米特法则要求我们将对象之间的交互限制在最小范围内。一个对象(A)不应该直接与没有耦合关系的对象(C)交互，而是应该通过与A有耦合关系的对象(B)间接地访问C。这样做可以减少对象之间的依赖关系，从而提高系统的可维护性和灵活性。</p>
+<p>举个例子：假设你和你的朋友参加了一个派对，如果你需要与派对上的其他人进行交互（例如询问活动时间或位置），你应该尽可能地通过你的朋友来实现(你的朋友与你不认识的人可能是朋友)。这样做可以减少你与其他人的直接交互，降低你们之间的耦合度，从而提高整个派对的效率和协作性。</p>
+<h3 id="7-组合-聚合复用原则-Composite-Aggregate-Reuse-Principle-CARP-or-CRP"><a href="#7-组合-聚合复用原则-Composite-Aggregate-Reuse-Principle-CARP-or-CRP" class="headerlink" title="7. 组合&#x2F;聚合复用原则 (Composite&#x2F;Aggregate Reuse Principle, CARP or CRP)"></a>7. 组合&#x2F;聚合复用原则 (Composite&#x2F;Aggregate Reuse Principle, CARP or CRP)</h3><p>这个原则倡导尽量使用组合&#x2F;聚合关系来复用对象，而不是使用继承关系来复用行为。</p>
+<p>继承在一定程度上会破坏封装，一旦父类实现发生改变，子类就会受到影响。相比之下，组合&#x2F;聚合则具有更高的灵活性，更好的保证了封装。使得代码的维护和扩展都更加容易。</p>
+<p>举个例子：</p>
+<p>有<code>Human</code>, <code>Monkey</code>两个类都继承了<code>Mammal</code>类(哺乳动物)。如果<code>Mammal</code>类中的某个函数被修改了，那么<code>Human</code>, <code>Monkey</code>类可能就会收到影响，也需要修改，就会很麻烦。</p>
+<p>如果换一种实现形式：设置一个基类或interface<code>BioClass</code>。 <code>Mammal</code>类继承(实现)<code>BioClass</code>类，<code>Human</code>类和<code>Monkey</code>类只需要包含一个<code>BioClass</code>类型的引用，这个引用实际指向<code>Mammal</code>类。这样就是用聚合的方式实现，如果<code>Mammal</code>类被修改，<code>Human</code>, <code>Monkey</code>类则无需修改。</p>
+<h2 id="原则重要性"><a href="#原则重要性" class="headerlink" title="原则重要性"></a>原则重要性</h2><p>上面的原则有的很重要，有的不那么重要，如果要排序，可以有如下的排序方式：</p>
+<p>OCP(开放-封闭), LSP(里氏替换), DIP(依赖倒置) &gt; SRP(单一职责), CARP(合成&#x2F;聚合复用) &gt; LoD(迪米特) &gt; ISP(接口隔离)</p>
+<p>参考来源：</p>
+<blockquote>
+<p>[1]《设计模式：可复用面向对象软件的基础》</p>
+<p>[2]  维基百科：设计模式</p>
+</blockquote>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/02/21/billu%20b0x%E9%9D%B6%E5%9C%BA%E6%B8%97%E9%80%8F%E6%8F%90%E6%9D%83(%E8%B6%85%E8%AF%A6%E7%BB%86)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jason Li">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Code Crafting">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Code Crafting">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/02/21/billu%20b0x%E9%9D%B6%E5%9C%BA%E6%B8%97%E9%80%8F%E6%8F%90%E6%9D%83(%E8%B6%85%E8%AF%A6%E7%BB%86)/" class="post-title-link" itemprop="url">billu b0x靶场渗透提权(超详细)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2025-02-21 18:11:11" itemprop="dateCreated datePublished" datetime="2025-02-21T18:11:11+08:00">2025-02-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" itemprop="url" rel="index"><span itemprop="name">网络安全</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>9 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202310250115198.png" alt="image-20231024201252834"></p>
-<p>Vulnhub靶机billu b0x的渗透实战记录，每一步都有详细的思路和操作过程</p>
-<h1 id="靶机简介"><a href="#靶机简介" class="headerlink" title="靶机简介"></a>靶机简介</h1><p>官方下载地址：<a target="_blank" rel="noopener" href="https://www.vulnhub.com/entry/billu-b0x,188/">https://www.vulnhub.com/entry/billu-b0x,188/</a></p>
-<p><img src="https://hachaosg2p-1308589153.cos.ap-nanjing.myqcloud.com/202310250144485.png" alt="image-20231025014413349"></p>
-<p>目标是获得靶机root权限。话不多说，直接开始：</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2025/02/21/billu%20b0x%E9%9D%B6%E5%9C%BA%E6%B8%97%E9%80%8F%E6%8F%90%E6%9D%83(%E8%B6%85%E8%AF%A6%E7%BB%86)/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/11/30/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---TCP%E9%80%9A%E4%BF%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jason Li">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Code Crafting">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Code Crafting">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/11/30/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---TCP%E9%80%9A%E4%BF%A1/" class="post-title-link" itemprop="url">python socket编程之---TCP通信</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-11-30 15:41:01" itemprop="dateCreated datePublished" datetime="2023-11-30T15:41:01+08:00">2023-11-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-02-22 18:08:30" itemprop="dateModified" datetime="2025-02-22T18:08:30+08:00">2025-02-22</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>学习过计算机网络，我们就知道传输层依靠TCP与UDP协议进行消息传输，socket是封装了TCP与UDP协议的一个面向程序员的接口。我们在网络编程时，会经常用到socket，下面就讲讲如何用python的socket实现服务端与客户端之间的TCP通信</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2023/11/30/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---TCP%E9%80%9A%E4%BF%A1/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
       
     </div>
 
@@ -994,7 +1395,7 @@
     <div class="footer-inner">
 
   <div class="copyright">
-    &copy; 
+    &copy; 2023 – 
     <span itemprop="copyrightYear">2025</span>
     <span class="with-love">
       <i class="fa fa-heart"></i>
@@ -1006,17 +1407,17 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
+      <span>站点总字数：</span>
     <span title="站点总字数">13k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
+      <span>站点阅读时长 &asymp;</span>
     <span title="站点阅读时长">45 分钟</span>
   </span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
-  </div>
 
     </div>
   </footer>
@@ -1040,9 +1441,12 @@
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
 
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
 
 
 
