@@ -222,9 +222,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-02-22 18:12:08 / 修改时间：19:41:20" itemprop="dateCreated datePublished" datetime="2025-02-22T18:12:08+08:00">2025-02-22</time>
+      <time title="创建时间：2025-02-22 18:12:08" itemprop="dateCreated datePublished" datetime="2025-02-22T18:12:08+08:00">2025-02-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-02-26 21:39:23" itemprop="dateModified" datetime="2025-02-26T21:39:23+08:00">2025-02-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -243,14 +249,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>1.4k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>4 分钟</span>
+      <span>5 分钟</span>
     </span>
 </div>
 
@@ -262,8 +268,8 @@
     
     <div class="post-body" itemprop="articleBody">
           <p>相比于 TCP 的面向连接、可靠传输，UDP 协议是一种无连接、不保证数据可靠性和顺序的传输方式。它更适用于对实时性要求高，但对丢包不敏感的场景，比如视频直播、在线游戏和语音通信等。Python 中的 socket 模块同样封装了 UDP 协议，为程序员提供了简便的接口来实现 UDP 通信。本文将分别介绍 UDP 通信中的客户端与服务端实现方法，并给出相应的代码示例。</p>
-<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>UDP 客户端无需建立连接，而是直接将数据报发送到指定的服务器地址和端口。下面的示例展示了如何使用 Python 的 socket 模块实现一个简单的 UDP 客户端：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个 UDP socket，AF_INET表示IPv4，SOCK_DGRAM表示使用UDP协议</span></span><br><span class="line">s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义服务端的地址与端口</span></span><br><span class="line">server_addr = (<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">8888</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 要发送的消息</span></span><br><span class="line">message = <span class="string">&quot;hello, UDP&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用sendto方法将消息发送到指定的服务端地址</span></span><br><span class="line">s.sendto(message.encode(), server_addr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接收来自服务端的响应，recvfrom返回一个元组：(数据, 服务端地址)</span></span><br><span class="line">data, addr = s.recvfrom(<span class="number">1024</span>)</span><br><span class="line"><span class="keyword">if</span> data:</span><br><span class="line">	recv_message = data.decode()</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">f&quot;接收到来自 <span class="subst">&#123;addr&#125;</span> 的消息: <span class="subst">&#123;recv_message&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
+<h2 id="客户端-Client"><a href="#客户端-Client" class="headerlink" title="客户端(Client)"></a>客户端(Client)</h2><p>UDP 客户端无需建立连接，而是直接将数据报发送到指定的服务器地址和端口。下面的示例展示了如何使用 Python 的 socket 模块实现一个简单的 UDP 客户端：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个 UDP socket，AF_INET表示IPv4，SOCK_DGRAM表示使用UDP协议</span></span><br><span class="line">s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置超时时长，单位为秒。1s=1000ms</span></span><br><span class="line">s.settimeout(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义服务端的地址与端口。 因为UDP是无连接的服务，所以只需要知道IP地址和端口号，就可以直接发送消息，无需建立连接。</span></span><br><span class="line">server_addr = (<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">8888</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 要发送的消息</span></span><br><span class="line">message = <span class="string">&quot;hello, UDP&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用sendto方法将消息发送到指定的服务端地址</span></span><br><span class="line">s.sendto(message.encode(), server_addr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接收来自服务端的响应，recvfrom返回一个元组：(数据, 服务端地址)</span></span><br><span class="line"><span class="comment"># 因为设置了超时，所以使用try,except语句处理超时错误，避免程序崩溃</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">	data, addr = s.recvfrom(<span class="number">1024</span>)</span><br><span class="line">	<span class="keyword">if</span> data:</span><br><span class="line">		recv_message = data.decode()</span><br><span class="line">		<span class="built_in">print</span>(<span class="string">f&quot;接收到来自 <span class="subst">&#123;addr&#125;</span> 的消息: <span class="subst">&#123;recv_message&#125;</span>&quot;</span>)</span><br><span class="line"><span class="keyword">except</span> socket.timeout:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">&quot;timeout&quot;</span>)</span><br><span class="line"></span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2025/02/22/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---UDP%E9%80%9A%E4%BF%A1/#more" rel="contents">
@@ -333,7 +339,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-02-22 19:41:09" itemprop="dateModified" datetime="2025-02-22T19:41:09+08:00">2025-02-22</time>
+      <time title="修改时间：2025-02-26 21:39:35" itemprop="dateModified" datetime="2025-02-26T21:39:35+08:00">2025-02-26</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -372,7 +378,7 @@
     <div class="post-body" itemprop="articleBody">
           <p>学习过计算机网络，我们就知道传输层依靠TCP与UDP协议进行消息传输，socket是封装了TCP与UDP协议的一个面向程序员的接口。我们在网络编程时，会经常用到socket，下面就讲讲如何用python的socket实现服务端与客户端之间的TCP通信</p>
 <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>TCP通信，需要有一个服务端，一个或多个客户端。服务端监听端口，等待连接。客户端访问端口，请求连接。</p>
-<h1 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入socket库</span></span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个socket, AF_INET表示使用IPV4，SOCK_STREAM表示使用TCP协议</span></span><br><span class="line">s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line"><span class="comment"># 与服务端连接，addr是服务端的地址与端口</span></span><br><span class="line">addr = (<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">8888</span>)</span><br><span class="line">s.connect(addr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 建立连接后就可以发送消息了</span></span><br><span class="line">message = <span class="string">&quot;hello&quot;</span></span><br><span class="line">s.sendall(message.encode())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接受消息并打印出来</span></span><br><span class="line"><span class="comment"># recv(max) 表示一次接收多少字节的数据，这里是1024字节，也可以是2048等等。</span></span><br><span class="line">recv_datagram = s.recv(<span class="number">1024</span>)</span><br><span class="line"><span class="keyword">if</span> recv_datagram:</span><br><span class="line">  recv_message = recv_datagram.decode()</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&quot;receive message <span class="subst">&#123;recv_message&#125;</span> from server&quot;</span>)</span><br><span class="line">    </span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
+<h1 id="客户端-Client"><a href="#客户端-Client" class="headerlink" title="客户端(Client)"></a>客户端(Client)</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入socket库</span></span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个socket, AF_INET表示使用IPV4，SOCK_STREAM表示使用TCP协议</span></span><br><span class="line">s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line"><span class="comment"># 与服务端连接，addr是服务端的地址与端口</span></span><br><span class="line">addr = (<span class="string">&quot;127.0.0.1&quot;</span>, <span class="number">8888</span>)</span><br><span class="line">s.connect(addr)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 建立连接后就可以发送消息了</span></span><br><span class="line">message = <span class="string">&quot;hello&quot;</span></span><br><span class="line">s.sendall(message.encode())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 接受消息并打印出来</span></span><br><span class="line"><span class="comment"># recv(max) 表示一次接收多少字节的数据，这里是1024字节，也可以是2048等等。</span></span><br><span class="line">recv_datagram = s.recv(<span class="number">1024</span>)</span><br><span class="line"><span class="keyword">if</span> recv_datagram:</span><br><span class="line">  recv_message = recv_datagram.decode()</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">f&quot;receive message <span class="subst">&#123;recv_message&#125;</span> from server&quot;</span>)</span><br><span class="line">    </span><br><span class="line">s.close()</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/11/30/python%20socket%E7%BC%96%E7%A8%8B%E4%B9%8B---TCP%E9%80%9A%E4%BF%A1/#more" rel="contents">
@@ -1102,14 +1108,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">13k</span>
+    <span title="站点总字数">14k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">45 分钟</span>
+    <span title="站点阅读时长">46 分钟</span>
   </span>
 </div>
 
